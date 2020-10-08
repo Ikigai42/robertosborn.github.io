@@ -5,45 +5,54 @@
     <meta charset="utf-8" />
     <style>
       /* GLOBAL STYLES */
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
       h1 {
-        font-size: 7vw; /* % of the viewport width becomes the height of the font */
+        font-size: 7vw;
         margin-top: 0;
       }
       a {
         color: #f00;
       }
-      h2 {
-        font-size: 30px;
-      }
 
       /* HERO STYLES */
       .full-hero {
         background-color: #c7dbfc;
-        height: 50vw; /* 50% of the viewport height of the browswer */
-        width: 50vw;
+        height: 50vh;
       }
 
       /* SOCIAL STYLES */
       .social-link {
         background: rgba(150, 150, 150, 0.5);
-        color: rgba(0, 191, 255, 1);
+        color: blue;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+      }
+      .social-list {
+        list-style: none;
+        padding: 0;
+        text-align: right;
+      }
+      .social-list > li {
+        /* > is the child selector it's an advanced selector that only targets the first child*/
+        display: inline-block; /*inline block treats the elements as if they are words and adds space after each*/
       }
 
       /* BIO STYLES */
       .bio-wrapper {
         font-size: 24px;
+        overflow: hidden;
       }
       .bio-box {
-        border: 1px solid #000000;
-        font-size: 1em;
-        margin: 10%;
-        padding: 20px;
-        width: 50%;
+        border: 1px solid black;
+        box-sizing: border-box;
+        float: left;
+        font-size: 1rem;
+        padding: 2%;
+        width: 25%;
+      }
+
+      .bio-box > a {
+        color: #c68bf9;
       }
       .bio-box h3 {
         font-size: 1.5em;
@@ -59,15 +68,15 @@
   <body>
     <div class="full-hero hero-home">
       <h1>I'm an h1</h1>
-      <ul class="social-link">
+      <ul class="social-list">
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link1</a>
         </li>
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link2</a>
         </li>
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link3</a>
         </li>
       </ul>
     </div>
@@ -128,5 +137,34 @@
         <p>The Future</p>
       </div>
     </div>
+    <p>
+      Learn Enough to Be Dangerous is a leader in the movement to teach the
+      world <em>technical sophistication</em>, which includes both "hard skills"
+      like coding, command lines, and version control, and "soft skills" like
+      guessing keyboard shortcuts, Googling error messages, and knowing when to
+      just reboot the darn thing.
+    </p>
+    <p>
+      We believe there are <strong>at least a billion people</strong> who can
+      benefit from learning technical sophistication, probably more. To join our
+      movement,
+      <a href="https://learnenough.com/#email_list"
+        >sign up for our official email list</a
+      >
+      now.
+    </p>
+    <h3>Background</h3>
+    <p>
+      Learn Enough to Be Dangerous is an outgrowth of the
+      <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> and
+      the <a href="https://www.softcover.io/">Softcover publishing platform</a>.
+      This page is part of the sample site for
+      <a href="https://learnenough.com/css-tutorial"
+        ><em>Learn Enough CSS and Layout to Be Dangerous</em></a
+      >, which teaches the basics of <strong>C</strong>ascading
+      <strong>S</strong>tyle <strong>S</strong>heets, the language that allows
+      web pages to be styled. Other related tutorials can be found at
+      <a href="https://learnenough.com/">learnenough.com</a>.
+    </p>
   </body>
 </html>
