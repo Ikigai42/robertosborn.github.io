@@ -10,10 +10,16 @@ h1 {
   font-size: 7vw;
   margin-top: 0;
 }
-a {
-  color: #f00;
+h2 {
+  font-size: 2em;
 }
-h2 + p {
+a {
+  color: #6397b5;
+}
+p {
+  line-height: 1.5;
+}
+h2 ~ p {
   font-size: 0.8em;
   font-style: italic;
   margin: 1em auto 0;
@@ -28,6 +34,25 @@ h2 + p {
   position: fixed;
   width: 100%;
   z-index: 20;
+}
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  left: -30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 10vh;
+}
+.header-logo:hover,
+.header-logo:active {
+  background-color: #ed6e2f;
+}
+.header-logo img {
+  height: 80%;
+  width: 4.3vh;
 }
 .header-nav {
   float: right;
@@ -62,25 +87,6 @@ h2 + p {
 .header-nav > li:first-child a:hover {
   color: #fff;
 }
-.header-logo {
-  background-color: #000;
-  box-sizing: border-box;
-  display: block;
-  height: 10vh;
-  left: -30px;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  width: 10vh;
-}
-.header-logo img {
-  height: 80%;
-  width: 4.3vh;
-}
-.header-logo:hover,
-.header-logo:active {
-  background-color: #ed6e2f;
-}
 
 /* FOOTER STYLES */
 .footer {
@@ -109,12 +115,50 @@ h2 + p {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
 }
-.full-hero:hover,
+.full-hero:after {
+  bottom: 2vh;
+  color: #fff;
+  content: "﹀";
+  font-size: 36px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate /* the first value is the x axis second is y axis*/
+    (0, -50%);
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw; /*Event though these are set they help to ensure they aren't overwritten incase someone in the future is styling the global h1s in the global styles*/
+  margin-bottom: 0.25em;
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #556c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+/* .full-hero:hover,
 .full-hero:active {
   color: grey;
-}
+} */
 /* SOCIAL STYLES */
 .social-link {
   background: rgba(150, 150, 150, 0.5);
@@ -148,6 +192,30 @@ h2 + p {
   margin: 0 0.5em;
 }
 
+/* HOMEPAGE STYLES */
+.home-section {
+  margin: 6rem auto;
+  max-width: 980px;
+  width: 90vw;
+}
+.home-section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.home-callout {
+  background-color: #000;
+  color: #fff;
+  padding: 7vh 0;
+}
+.callout-title {
+  font-size: 5.75vw;
+  text-align: right;
+  text-transform: uppercase;
+}
+.callout-copy {
+  font-size: 0.8rem;
+}
+
 /* BIO STYLES */
 .bio-wrapper {
   font-size: 24px;
@@ -156,31 +224,27 @@ h2 + p {
   overflow: hidden;
 }
 .bio-box {
-  border: 1px solid black;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 .bio-box img {
   width: 100%;
 }
 .bio-box .social-link {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 .bio-copy {
-  font-size: 1em;
-  line-height: 1.5;
-}
-.bio-copy a {
-  color: green;
+  font-size: 0.75em;
 }
