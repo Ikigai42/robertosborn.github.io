@@ -193,30 +193,6 @@ h6 {
   color: #333;
 }
 
-/* MOBILE MENU */
-.mobile-menu-check,
-.show-mobile-menu {
-  display: none;
-}
-.show-mobile-menu {
-  display: block;
-  float: right;
-  font-weight: bold;
-  margin-top: 1.5vh;
-  padding: 1.5em;
-  position: relative;
-  text-transform: uppercase;
-}
-.header-nav {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0;
-  transition: all 0.5s ease-in-out;
-}
-.mobile-menu-check:checked ~ .header-nav {
-  max-height: 1000px;
-}
-
 /* HIDE IN THE FOOTER */
 .footer .dropdown:hover .drop-menu,
 .footer .drop-trigger:after {
@@ -605,6 +581,29 @@ h6 {
   html {
     box-shadow: none;
     padding: 0;
+  }
+  /* MOBILE MENU */
+  .mobile-menu-check,
+  .show-mobile-menu {
+    display: none;
+  }
+  .show-mobile-menu {
+    display: block;
+    float: right;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    padding: 1.5em;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .header-nav {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .mobile-menu-check:checked ~ .header-nav {
+    max-height: 1000px;
   }
 
   /* HEADER STYLES */
